@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Predator\\Desktop\\université\\session3\\INF1018\\devoir2\\Analyseur_Syntaxique\\Analyseur_Syntaxique\\Analyseur_Syntaxique\\Analyseur_Syntaxique.csproj": {}
+    "C:\\Users\\Predator\\Desktop\\université\\session3\\INF1018\\devoir2\\Analyseur_Syntaxique\\Analyseur_Syntaxique\\Analyseur_Syntaxique.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Predator\\Desktop\\université\\session3\\INF1018\\devoir2\\Analyseur_Syntaxique\\Analyseur_Syntaxique\\Analyseur_Syntaxique\\Analyseur_Syntaxique.csproj": {
+    "C:\\Users\\Predator\\Desktop\\université\\session3\\INF1018\\devoir2\\Analyseur_Syntaxique\\Analyseur_Syntaxique\\Analyseur_Syntaxique.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Predator\\Desktop\\université\\session3\\INF1018\\devoir2\\Analyseur_Syntaxique\\Analyseur_Syntaxique\\Analyseur_Syntaxique\\Analyseur_Syntaxique.csproj",
+        "projectUniqueName": "C:\\Users\\Predator\\Desktop\\université\\session3\\INF1018\\devoir2\\Analyseur_Syntaxique\\Analyseur_Syntaxique\\Analyseur_Syntaxique.csproj",
         "projectName": "Analyseur_Syntaxique",
-        "projectPath": "C:\\Users\\Predator\\Desktop\\université\\session3\\INF1018\\devoir2\\Analyseur_Syntaxique\\Analyseur_Syntaxique\\Analyseur_Syntaxique\\Analyseur_Syntaxique.csproj",
+        "projectPath": "C:\\Users\\Predator\\Desktop\\université\\session3\\INF1018\\devoir2\\Analyseur_Syntaxique\\Analyseur_Syntaxique\\Analyseur_Syntaxique.csproj",
         "packagesPath": "C:\\Users\\Predator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Predator\\Desktop\\université\\session3\\INF1018\\devoir2\\Analyseur_Syntaxique\\Analyseur_Syntaxique\\Analyseur_Syntaxique\\obj\\",
+        "outputPath": "C:\\Users\\Predator\\Desktop\\université\\session3\\INF1018\\devoir2\\Analyseur_Syntaxique\\Analyseur_Syntaxique\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
