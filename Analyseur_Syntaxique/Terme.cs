@@ -2,7 +2,7 @@
 {
     class Terme
     {
-        public Terme()
+        public Terme(string input)
         {
 
         }
