@@ -2,5 +2,9 @@
 {
     class Facteur
     {
+        public Facteur()
+        {
+
+        }
     }
 }

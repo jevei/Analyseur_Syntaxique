@@ -2,5 +2,9 @@
 {
     class Terme
     {
+        public Terme()
+        {
+
+        }
     }
 }

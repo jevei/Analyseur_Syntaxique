@@ -2,5 +2,9 @@
 {
     class Procedure
     {
+        public Procedure()
+        {
+
+        }
     }
 }

@@ -2,5 +2,9 @@
 {
     class ExpressionArithmetique
     {
+        public ExpressionArithmetique(string expr)
+        {
+
+        }
     }
 }

@@ -2,5 +2,9 @@
 {
     class Declarations
     {
+        public Declarations()
+        {
+
+        }
     }
 }
