@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Analyseur_Syntaxique
+﻿namespace Analyseur_Syntaxique
 {
     class Variable
     {
