@@ -2,7 +2,7 @@
 {
     class Facteur
     {
-        public Facteur()
+        public Facteur(string input)
         {
 
         }

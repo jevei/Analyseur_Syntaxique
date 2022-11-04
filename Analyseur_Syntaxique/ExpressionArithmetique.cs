@@ -4,8 +4,8 @@ namespace Analyseur_Syntaxique
 {
     class ExpressionArithmetique
     {
-        private char plus;
-        private char moins;
+        private readonly char plus;
+        private readonly char moins;
         private Terme terme;
         private ObservableCollection<Terme> termes;
         private ObservableCollection<char> lexique;
@@ -30,21 +30,29 @@ namespace Analyseur_Syntaxique
                     int j = i + 1;
                     if (expr[j] == plus || expr[j] == moins)
                     {
-                        terme = new Terme(temp);
-                        termes.Add(terme);
+                        AddTerme(temp);
                         lexique.Add(expr[j]);
                         i = j + 1;
-                        terme = null;
                         temp = "";
                     }
                 }
             }
             if (temp!="")
             {
-                terme = new Terme(temp);
-                termes.Add(terme);
-                terme = null;
+                AddTerme(temp);
             }
+        }
+
+        private void AddTerme(string input)
+        {
+            terme = new Terme(input);
+            termes.Add(terme);
+            terme = null;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
         }
     }
 }
