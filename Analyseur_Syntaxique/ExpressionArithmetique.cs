@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace Analyseur_Syntaxique
 {
@@ -52,7 +53,16 @@ namespace Analyseur_Syntaxique
 
         public override string ToString()
         {
-            return base.ToString();
+            string retour = "";
+            for (int i = 0; i != termes.Count; i++)
+            {
+                retour += termes.ElementAt(i).ToString();
+                if (lexique.Count > 0)
+                {
+                    retour += lexique.ElementAt(i);
+                }
+            }
+            return retour;
         }
     }
 }
