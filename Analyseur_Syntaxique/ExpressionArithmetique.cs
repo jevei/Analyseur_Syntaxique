@@ -8,8 +8,8 @@ namespace Analyseur_Syntaxique
         private readonly char plus;
         private readonly char moins;
         private Terme terme;
-        private ObservableCollection<Terme> termes;
-        private ObservableCollection<char> lexique;
+        private readonly ObservableCollection<Terme> termes;
+        private readonly ObservableCollection<char> lexique;
 
         public ExpressionArithmetique(string expr)
         {

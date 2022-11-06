@@ -8,8 +8,8 @@ namespace Analyseur_Syntaxique
         private readonly char mult;
         private readonly char divi;
         private Facteur facteur;
-        private ObservableCollection<Facteur> facteurs;
-        private ObservableCollection<char> lexique;
+        private readonly ObservableCollection<Facteur> facteurs;
+        private readonly ObservableCollection<char> lexique;
 
         public Terme(string input)
         {
