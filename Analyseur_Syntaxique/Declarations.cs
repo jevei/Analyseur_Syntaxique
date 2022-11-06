@@ -4,7 +4,8 @@ namespace Analyseur_Syntaxique
 {
     class Declarations
     {
-        private ObservableCollection<Declaration> declarations;
+        private readonly ObservableCollection<Declaration> declarations;
+
         public Declarations(string input)
         {
             declarations = new ObservableCollection<Declaration>();
