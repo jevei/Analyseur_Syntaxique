@@ -6,7 +6,7 @@
         private readonly char gauche;*/
         private char firstChar;
         private Nombre number;
-        //private Variable variable;
+        private Variable variable;
         //private ExpressionArithmetique expression;
 
         public Facteur(string input)
@@ -25,7 +25,7 @@
             }
             else if ((firstChar >= 65 && firstChar <= 90) || (firstChar >= 97 && firstChar <= 122))
             {
-                ///TODO: Facteur.variable
+                variable = new Variable(input);
             }
             else if (firstChar >= 48 && firstChar <= 57)
             {
@@ -42,8 +42,7 @@
             }
             else if ((firstChar >= 65 && firstChar <= 90) || (firstChar >= 97 && firstChar <= 122))
             {
-                ///TODO: Facteur.variable.ToString
-                return "PLACEHOLDER";
+                return variable.ToString();
             }
             else if (firstChar >= 48 && firstChar <= 57)
             {
