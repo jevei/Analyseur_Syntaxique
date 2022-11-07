@@ -21,7 +21,6 @@ namespace Analyseur_Syntaxique
         private void Setup(string input)
         {
             string var = "";
-            string expr = "";
             string temp = "";
             for (int i = 0; i != input.Length; i++)
             {
@@ -41,8 +40,7 @@ namespace Analyseur_Syntaxique
                 }
                 else if (input[i] == 59)
                 {
-                    expr = temp;
-                    instructions.Add(new InstructionAffectation(var, expr));
+                    instructions.Add(new InstructionAffectation(var, temp));
                     temp = "";
                 }
             }

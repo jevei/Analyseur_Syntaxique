@@ -2,26 +2,39 @@
 {
     class Facteur
     {
-        /*private readonly char droite;
-        private readonly char gauche;*/
+        private readonly char droite;
+        private readonly char gauche;
         private char firstChar;
         private Nombre number;
         private Variable variable;
-        //private ExpressionArithmetique expression;
+        private ExpressionArithmetique expression;
 
         public Facteur(string input)
         {
-            /*droite = ')';
-            gauche = '(';*/
+            droite = (char)41;
+            gauche = (char)40;
+            firstChar = input[0];
             Setup(input);
         }
 
         private void Setup(string input)
         {
-            firstChar = input[0];
-            if (firstChar == '(')
+            if (firstChar == gauche)
             {
-                ///TODO: Facteur.expression
+                string temp = "";
+                for (int i = 2; i != input.Length; i++)
+                {
+                    temp += input[i];
+                    if (input[i] == droite)
+                    {
+                        temp = temp.Remove(i - 2);
+                        expression = new ExpressionArithmetique(temp);
+                    }
+                    else if (i + 1 == input.Length)
+                    {
+                        ///TODO: ERREUR
+                    }
+                }
             }
             else if ((firstChar >= 65 && firstChar <= 90) || (firstChar >= 97 && firstChar <= 122))
             {
@@ -37,8 +50,7 @@
         {
             if (firstChar == '(')
             {
-                ///TODO: Facteur.expression.ToString
-                return "PLACEHOLDER";
+                return gauche + expression.ToString() + droite;
             }
             else if ((firstChar >= 65 && firstChar <= 90) || (firstChar >= 97 && firstChar <= 122))
             {

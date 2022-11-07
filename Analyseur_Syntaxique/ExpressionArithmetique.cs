@@ -23,18 +23,30 @@ namespace Analyseur_Syntaxique
         private void Setup(string expr)
         {
             string temp = "";
+            bool parentheseOuverte = false;
             for (int i = 0; i != expr.Length; i++)
             {
                 temp += expr[i];
                 if (i != expr.Length - 1)
                 {
-                    int j = i + 1;
-                    if (expr[j] == plus || expr[j] == moins)
+                    if (expr[i] == 40)
                     {
-                        AddTerme(temp);
-                        lexique.Add(expr[j]);
-                        i = j + 1;
-                        temp = "";
+                        parentheseOuverte = true;
+                    }
+                    else if (expr[i] == 41)
+                    {
+                        parentheseOuverte = false;
+                    }
+                    if (parentheseOuverte == false)
+                    {
+                        int j = i + 1;
+                        if (expr[j] == plus || expr[j] == moins)
+                        {
+                            AddTerme(temp);
+                            lexique.Add(expr[j]);
+                            i = j + 1;
+                            temp = "";
+                        }
                     }
                 }
             }

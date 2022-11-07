@@ -53,6 +53,11 @@ namespace Analyseur_Syntaxique
                 else if (input[i] == 59)
                 {
                     declarations.Add(new Declaration(declare, var, typ));
+                    declare = "";
+                    var = "";
+                    typ = "";
+                    temp = "";
+                    i++;
                 }
             }
         }
