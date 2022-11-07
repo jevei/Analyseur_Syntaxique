@@ -13,10 +13,15 @@
         {
             identificateur = new Identificateur(input);
         }
-        
+
         public Identificateur GetIdentificateur()
         {
             return identificateur;
+        }
+
+        public override string ToString()
+        {
+            return identificateur.ToString();
         }
     }
 }

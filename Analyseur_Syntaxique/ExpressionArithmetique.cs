@@ -38,7 +38,7 @@ namespace Analyseur_Syntaxique
                     }
                 }
             }
-            if (temp!="")
+            if (temp != "")
             {
                 AddTerme(temp);
             }
@@ -57,7 +57,7 @@ namespace Analyseur_Syntaxique
             for (int i = 0; i != termes.Count; i++)
             {
                 retour += termes.ElementAt(i).ToString();
-                if (lexique.Count > 0)
+                if (lexique.Count > i)
                 {
                     retour += lexique.ElementAt(i);
                 }

@@ -9,9 +9,6 @@
 
         public Procedure(string proc)
         {
-            start = new Identificateur();
-            declarations = new Declarations();
-            instructions = new InstructionsAffectation();
             Setup(proc);
         }
 
@@ -48,13 +45,13 @@
                             temp = "";
                         }
                     }
-                    else if (proc.Substring(i + 1, 13) != "Fin_Procedure")
-                    {
-                        instructions = new InstructionsAffectation(temp);
-                        temp = "";
-                    }
                     else if (temp == "Fin_Procedure ")
                     {
+                        temp = "";
+                    }
+                    else if (proc.Substring(i + 1, 13) == "Fin_Procedure" && declarations != null)
+                    {
+                        instructions = new InstructionsAffectation(temp);
                         temp = "";
                     }
                 }
@@ -67,6 +64,11 @@
                     }
                 }
             }
+        }
+
+        public override string ToString()
+        {
+            return start.ToString() + declarations.ToString() + instructions.ToString() + end;
         }
     }
 }

@@ -57,7 +57,7 @@ namespace Analyseur_Syntaxique
             for (int i = 0; i != facteurs.Count; i++)
             {
                 retour += facteurs.ElementAt(i).ToString();
-                if (lexique.Count > 0)
+                if (lexique.Count > i)
                 {
                     retour += lexique.ElementAt(i);
                 }

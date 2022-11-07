@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace Analyseur_Syntaxique
 {
@@ -46,6 +47,16 @@ namespace Analyseur_Syntaxique
                 }
             }
             instructions.Add(new InstructionAffectation(var, temp));
+        }
+
+        public override string ToString()
+        {
+            string temp = "";
+            for (int i = 0; i != instructions.Count; i++)
+            {
+                temp += instructions.ElementAt(i).ToString();
+            }
+            return temp;
         }
     }
 }

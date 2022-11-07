@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace Analyseur_Syntaxique
 {
@@ -54,6 +55,16 @@ namespace Analyseur_Syntaxique
                     declarations.Add(new Declaration(declare, var, typ));
                 }
             }
+        }
+
+        public override string ToString()
+        {
+            string temp = "";
+            for (int i = 0; i != declarations.Count; i++)
+            {
+                temp += declarations.ElementAt(i).ToString();
+            }
+            return temp;
         }
     }
 }
