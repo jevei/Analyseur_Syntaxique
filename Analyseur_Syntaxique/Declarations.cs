@@ -6,6 +6,11 @@ namespace Analyseur_Syntaxique
     {
         private readonly ObservableCollection<Declaration> declarations;
 
+        public Declarations()
+        {
+
+        }
+
         public Declarations(string input)
         {
             declarations = new ObservableCollection<Declaration>();

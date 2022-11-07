@@ -11,6 +11,11 @@
             Setup(input);
         }
 
+        public Identificateur()
+        {
+
+        }
+
         private void Setup(string input)
         {
             firstLetter = input[0];

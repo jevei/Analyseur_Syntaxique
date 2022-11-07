@@ -6,6 +6,11 @@ namespace Analyseur_Syntaxique
     {
         private readonly ObservableCollection<InstructionAffectation> instructions;
 
+        public InstructionsAffectation()
+        {
+
+        }
+
         public InstructionsAffectation(string input)
         {
             instructions = new ObservableCollection<InstructionAffectation>();
