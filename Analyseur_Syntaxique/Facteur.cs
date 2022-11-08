@@ -1,10 +1,12 @@
-﻿namespace Analyseur_Syntaxique
+﻿using System;
+
+namespace Analyseur_Syntaxique
 {
     class Facteur
     {
         private readonly char droite;
         private readonly char gauche;
-        private char firstChar;
+        private readonly char firstChar;
         private Nombre number;
         private Variable variable;
         private ExpressionArithmetique expression;
@@ -32,7 +34,8 @@
                     }
                     else if (i + 1 == input.Length)
                     {
-                        ///TODO: ERREUR
+                        Console.WriteLine("Erreur: Expression arithmétique entre parenthèse manque la parenthèse de droite.");
+                        Environment.Exit(0);
                     }
                 }
             }

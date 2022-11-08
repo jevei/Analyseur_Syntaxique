@@ -1,4 +1,6 @@
-﻿namespace Analyseur_Syntaxique
+﻿using System;
+
+namespace Analyseur_Syntaxique
 {
     class Procedure
     {
@@ -34,7 +36,8 @@
                         }
                         else
                         {
-                            ///TODO: ERREUR
+                            Console.WriteLine("Erreur: L'identificateur de début n'a pas de lettre comme premier caractère.");
+                            Environment.Exit(0);
                         }
                     }
                     else if (proc[j] == 59 && declarations == null)
@@ -60,7 +63,8 @@
                     end = temp;
                     if (end != start.ToString())
                     {
-                        ///TODO: ERREUR
+                        Console.WriteLine("Erreur: L'identificateur de fin n'était pas le même que celui du début.");
+                        Environment.Exit(0);
                     }
                 }
             }
