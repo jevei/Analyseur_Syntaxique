@@ -1,4 +1,6 @@
-﻿namespace Analyseur_Syntaxique
+﻿using System;
+
+namespace Analyseur_Syntaxique
 {
     class Variable
     {
@@ -11,7 +13,15 @@
 
         private void Setup(string input)
         {
-            identificateur = new Identificateur(input);
+            if ((input[0] >= 65 && input[0] <= 90) || (input[0] >= 97 && input[0] <= 122))
+            {
+                identificateur = new Identificateur(input);
+            }
+            else
+            {
+                Console.WriteLine("Erreur: L'identificateur " + input + " n'a pas de lettre comme premier caractère.");
+                Environment.Exit(0);
+            }
         }
 
         public Identificateur GetIdentificateur()
