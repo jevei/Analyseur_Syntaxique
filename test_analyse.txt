@@ -1,0 +1,18 @@
+Test 1:
+Procedure a12 declare b11 : entier ; b11 = 2 * 2 + 2 Fin_Procedure a12
+Test 2:
+Procedure a12 declare b11 : entier ; b11 = 2 * b11 + 2 Fin_Procedure a12
+Test 3:
+Procedure a12 declare b11 : entier ; b11 = 2 * ( 2 * 2 + 2 ) Fin_Procedure a12
+Test 4:
+Procedure a12 declare b11 : entier ; b11 = 2 * ( 2 * 2 + 2 ) Fin_Procedure a123
+Test 5:
+Procedure a12 declare b11 : entier ; declare b1111111 : entier ; b11 = 2 * ( 2 * 2 + 2 ) Fin_Procedure a12
+Test 6:
+Procedure 112 declare b11 : entier ; b11 = 2 * ( 2 * 2 + 2 ) Fin_Procedure a12
+Test 7:
+Procedure a12 declare b11 : entier ; declare b1111111 : entier ; b11 = 2 * ( 2 * 2 + 2  Fin_Procedure a12
+Test 8:
+Procedure a12 declare 111 : entier ; b11 = 2 * ( 2 * 2 + 2 ) Fin_Procedure a12
+Test 9:
+Procedure a12 declare b11 : entier ; b11 = 2 * ( 2 * 2 + 2 ) ; b11 = 2 * 2 + 2 Fin_Procedure a12

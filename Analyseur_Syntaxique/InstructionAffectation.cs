@@ -1,4 +1,6 @@
-﻿namespace Analyseur_Syntaxique
+﻿using System.Linq;
+
+namespace Analyseur_Syntaxique
 {
     class InstructionAffectation
     {
@@ -13,6 +15,10 @@
         private void Setup(string var, string expr)
         {
             variable = new Variable(var);
+            if (expr.ElementAt(expr.Length - 1) == 59)
+            {
+                expr = expr.Remove(expr.Length - 2);
+            }
             expression = new ExpressionArithmetique(expr);
         }
 

@@ -60,7 +60,7 @@ namespace Analyseur_Syntaxique
                 }
                 else if (i == proc.Length - 1)
                 {
-                    end = temp;
+                    end = temp + ' ';
                     if (end != start.ToString())
                     {
                         Console.WriteLine("Erreur: L'identificateur de fin n'était pas le même que celui du début.");
