@@ -42,6 +42,11 @@ namespace Analyseur_Syntaxique
             else if ((firstChar >= 65 && firstChar <= 90) || (firstChar >= 97 && firstChar <= 122))
             {
                 variable = new Variable(input);
+               /* if (!Program.variableList.Contains(variable))////TODO
+                {
+                    Console.WriteLine("Erreur: Variable " + variable.ToString() + " n'existe pas!");
+                    Environment.Exit(0);
+                }*/
             }
             else if (firstChar >= 48 && firstChar <= 57)
             {

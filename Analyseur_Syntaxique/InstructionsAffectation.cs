@@ -42,6 +42,8 @@ namespace Analyseur_Syntaxique
                 {
                     instructions.Add(new InstructionAffectation(var, temp));
                     temp = "";
+                    var = "";
+                    i++;
                 }
             }
             instructions.Add(new InstructionAffectation(var, temp));

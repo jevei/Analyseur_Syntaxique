@@ -15,6 +15,7 @@
         {
             declare = decla;
             variable = new Variable(var);
+            Program.variableList.Add(variable);
             switch (typ)
             {
                 case "entier":
