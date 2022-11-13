@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Analyseur_Syntaxique
 {
-    class Variable
+    class Variable : IEquatable<Variable>
     {
         private Identificateur identificateur;
 
@@ -32,6 +33,11 @@ namespace Analyseur_Syntaxique
         public override string ToString()
         {
             return identificateur.ToString();
+        }
+
+        public bool Equals([AllowNull] Variable other)
+        {
+            return this.identificateur.ToString() == other.identificateur.ToString();
         }
     }
 }
