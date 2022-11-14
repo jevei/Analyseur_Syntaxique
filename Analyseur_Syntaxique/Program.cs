@@ -10,7 +10,7 @@ namespace Analyseur_Syntaxique
         static void Main(string[] args)
         {
             variableList = new List<Variable>();
-            Procedure procedure = new Procedure("Procedure a12 declare b11 : entier ; b11 = 2 * ( 2 * 2 + 2 ) ; c23 = 2 * 2 + 2 Fin_Procedure a12");
+            Procedure procedure = new Procedure("Procedure a12 declare 111 : entier ; b11 = 2 * ( 2 * 2 + 2 ) Fin_Procedure a12");
             Console.WriteLine(procedure.ToString());
         }
     }

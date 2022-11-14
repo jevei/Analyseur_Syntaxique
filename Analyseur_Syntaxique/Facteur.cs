@@ -21,22 +21,32 @@ namespace Analyseur_Syntaxique
 
         private void Setup(string input)
         {
-            if (firstChar == gauche)
+            if (input.Contains(droite) || input.Contains(gauche))
             {
-                string temp = "";
-                for (int i = 2; i != input.Length; i++)
+                if (firstChar == gauche)
                 {
-                    temp += input[i];
-                    if (input[i] == droite)
+                    string temp = "";
+                    bool pTrouve = false;
+                    for (int i = 2; i != input.Length; i++)
                     {
-                        temp = temp.Remove(i - 2);
-                        expression = new ExpressionArithmetique(temp);
+                        temp += input[i];
+                        if (input[i] == droite)
+                        {
+                            pTrouve = true;
+                            temp = temp.Remove(i - 2);
+                            expression = new ExpressionArithmetique(temp);
+                        }
+                        else if (i + 1 == input.Length && pTrouve == false)
+                        {
+                            Console.WriteLine("Erreur: Expression arithmétique entre parenthèse manque la parenthèse de droite.");
+                            Environment.Exit(0);
+                        }
                     }
-                    else if (i + 1 == input.Length)
-                    {
-                        Console.WriteLine("Erreur: Expression arithmétique entre parenthèse manque la parenthèse de droite.");
-                        Environment.Exit(0);
-                    }
+                }
+                else
+                {
+                    Console.WriteLine("Erreur: Expression arithmétique entre parenthèse manque la parenthèse de gauche.");
+                    Environment.Exit(0);
                 }
             }
             else if ((firstChar >= 65 && firstChar <= 90) || (firstChar >= 97 && firstChar <= 122))
